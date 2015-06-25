@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_background" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingLeft="32dp" android:paddingRight="32dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView android:text="Hi there," android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:typeface="normal"
+            android:textSize="@dimen/title_size"
+            android:textColor="@color/white"/>
+        <TextView android:text="are you using a" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:typeface="normal"
+            android:textSize="@dimen/title_size"
+            android:textColor="@color/white"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company Device"
+                android:textColor="@color/white"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Device"
+                android:textColor="@color/white"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/small_size"
+            android:textColor="@color/white"
+            android:text="Step 1 out of 3"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</RelativeLayout>
