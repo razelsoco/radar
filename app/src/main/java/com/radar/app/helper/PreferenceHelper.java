@@ -10,6 +10,7 @@ public class PreferenceHelper {
     public static final String KEY_DEVICE_TYPE="device_type";
     public static final String KEY_USERNAME="username";
     public static final String KEY_DEVICE_NAME="device_name";
+    public static final String SETUP="setup_fin";
     public static void setKeyDeviceType(String type){
         RadarApplication.getInstance().sharedPreferences.edit().putString(KEY_DEVICE_TYPE,type).commit();
     }
@@ -35,4 +36,11 @@ public class PreferenceHelper {
     }
 
 
+    public static boolean isSetUpFinished() {
+        return RadarApplication.getInstance().sharedPreferences.getBoolean(SETUP, false);
+    }
+
+    public static void setSetUpFinished() {
+        RadarApplication.getInstance().sharedPreferences.edit().putBoolean(SETUP, true).commit();
+    }
 }

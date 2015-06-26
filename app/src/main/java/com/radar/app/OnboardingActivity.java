@@ -24,8 +24,8 @@ public class OnboardingActivity extends FragmentActivity {
 
        // if (checkPlayServices()) {
             // Start IntentService to register this application with GCM.
-            Intent intent = new Intent(this, RegistrationIntentService.class);
-            startService(intent);
+//            Intent intent = new Intent(this, RegistrationIntentService.class);
+//            startService(intent);
         //}
     }
 }

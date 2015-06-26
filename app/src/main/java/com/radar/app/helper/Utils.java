@@ -26,7 +26,7 @@ public class Utils {
      * */
     public static void scheduleAlarm(Context c) {
         AlarmManager manager = (AlarmManager)c.getSystemService(Context.ALARM_SERVICE);
-        int interval = 10000;
+        int interval = 3600000; //1 hour
 
         // Retrieve a PendingIntent that will perform a broadcast
         Intent alarmIntent = new Intent(c, UpdateTaskAlarmReceiver.class);

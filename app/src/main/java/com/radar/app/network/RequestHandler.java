@@ -11,6 +11,8 @@ import com.android.volley.VolleyError;
 import com.radar.app.RadarApplication;
 import com.radar.app.helper.PreferenceHelper;
 import com.radar.app.helper.Utils;
+import com.radar.app.models.DeviceDetailResponse;
+import com.radar.app.models.DeviceListResponse;
 import com.radar.app.models.RadarResponse;
 
 import java.util.Collection;
@@ -100,13 +102,13 @@ public class RequestHandler {
         MyVolleySingleton.getInstance(RadarApplication.getInstance().getApplicationContext()).addToRequestQueue(request);
     }
 
-    public static void getDeviceDetail(ResponseListener listener, String deviceID, String ssId){
-        GsonRequest<RadarResponse> request = new GsonRequest<RadarResponse>(Request.Method.POST, GET_DEVICE_DETAIL_URL, RadarResponse.class, listener ) {
+    public static void getDeviceDetail(ResponseListener listener,final String deviceID,final String ssId){
+        GsonRequest<DeviceDetailResponse> request = new GsonRequest<DeviceDetailResponse>(Request.Method.POST, GET_DEVICE_DETAIL_URL, DeviceDetailResponse.class, listener ) {
             @Override
             public Map<String, String> getCustomParams() {
                 Map<String, String> params = new HashMap<String,String>();
-                params.put("unique_key","device1");
-                params.put("wifi_ssid","2359");
+                params.put("unique_key",deviceID);
+                params.put("wifi_ssid",ssId);
                 return params;
             }
         };
@@ -114,13 +116,13 @@ public class RequestHandler {
         MyVolleySingleton.getInstance(RadarApplication.getInstance().getApplicationContext()).addToRequestQueue(request);
     }
 
-    public static void getDeviceList(ResponseListener listener, String deviceID, String ssId){
-        GsonRequest<RadarResponse> request = new GsonRequest<RadarResponse>(Request.Method.POST, GET_DEVICES_LIST_URL, RadarResponse.class, listener ) {
+    public static void getDeviceList(ResponseListener listener,final String deviceID,final String ssId){
+        GsonRequest<DeviceListResponse> request = new GsonRequest<DeviceListResponse>(Request.Method.POST, GET_DEVICES_LIST_URL, DeviceListResponse.class, listener ) {
             @Override
             public Map<String, String> getCustomParams() {
                 Map<String, String> params = new HashMap<String,String>();
-                params.put("unique_key","device1");
-                params.put("wifi_ssid","2359");
+                params.put("unique_key",deviceID);
+                params.put("wifi_ssid",ssId);
                 return params;
             }
         };
