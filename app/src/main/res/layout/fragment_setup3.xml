@@ -45,7 +45,19 @@
 
     </LinearLayout>
 
+    <Button android:id="@+id/bt_start"
+        android:text="Start searching"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:typeface="normal"
+        android:textSize="@dimen/normal_size"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:layout_above="@+id/bottom_panel"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_centerHorizontal="true"/>
 
-    <include layout="@layout/panel_back_next" />
+    <include android:id="@+id/bottom_panel" layout="@layout/panel_back_next" />
 
 </RelativeLayout>
