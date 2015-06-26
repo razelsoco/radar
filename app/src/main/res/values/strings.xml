@@ -6,4 +6,8 @@
 
     <string name="font">normal</string>
     <string name="real_font">Avenir Next</string>
+    <string name="step1">Step 1 out of 3</string>
+    <string name="step2">Step 2 out of 3</string>
+    <string name="step3">Step 3 out of 3</string>
+    <string name="progress_loading">Loading...</string>
 </resources>

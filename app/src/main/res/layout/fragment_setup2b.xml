@@ -34,7 +34,7 @@
 
         </LinearLayout>
 
-        <TextView android:text="What's your name?"
+        <TextView android:text="Enter device name"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingBottom="16dp"
@@ -55,7 +55,7 @@
                 android:textColor="@color/light_grey" />
         </LinearLayout>
 
-        <TextView android:text="(Don't worry, we respect your privacy and won't track your device)"
+        <TextView android:text="(Please enter the device name while following the format provided above to allow for easy tracking.)"
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:paddingTop="16dp"
             android:paddingLeft="16dp"
@@ -67,25 +67,6 @@
     </LinearLayout>
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_alignParentBottom="true"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:paddingBottom="16dp"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/small_size"
-            android:textColor="@color/white"
-            android:text="Step 2 out of 3"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+    <include layout="@layout/panel_back_next" />
 
 </RelativeLayout>
