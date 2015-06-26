@@ -5,4 +5,6 @@ package com.radar.app.helper;
  */
 public class ConstHelper {
     public static String HOST = "";
+
+    public static String GCM_SENDER = "31531675863" ;
 }

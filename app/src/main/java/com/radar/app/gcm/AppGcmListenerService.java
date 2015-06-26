@@ -44,7 +44,7 @@ public class AppGcmListenerService extends GcmListenerService {
     // [START receive_message]
     @Override
     public void onMessageReceived(String from, Bundle data) {
-        String message = data.getString("message");
+        String message = data.getString("notification");
         Log.d(TAG, "From: " + from);
         Log.d(TAG, "Message: " + message);
 
