@@ -39,7 +39,6 @@ public class MainActivity extends Activity {
             }
         });
 
-        //scheduleAlarm(this);
         if (checkPlayServices()) {
             // Start IntentService to register this application with GCM.
             Intent intent = new Intent(this, RegistrationIntentService.class);
@@ -70,20 +69,6 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * Schedules the update device status task for background updating
-     * */
-    public static void scheduleAlarm(Context c) {
-        AlarmManager manager = (AlarmManager)c.getSystemService(Context.ALARM_SERVICE);
-        int interval = 10000;
-
-        // Retrieve a PendingIntent that will perform a broadcast
-        Intent alarmIntent = new Intent(c, UpdateTaskAlarmReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(c, 0, alarmIntent, 0);
-
-        manager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval, pendingIntent);
-        Toast.makeText(c, "Alarm Set", Toast.LENGTH_SHORT).show();
-    }
 
     /**
      * Check the device to make sure it has the Google Play Services APK. If
